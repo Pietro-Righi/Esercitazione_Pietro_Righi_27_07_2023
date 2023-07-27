@@ -1,0 +1,1 @@
+# Esercitazione_Pietro_Righi_27_07_2023
