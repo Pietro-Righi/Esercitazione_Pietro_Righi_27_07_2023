@@ -3,7 +3,7 @@ package org.example.query;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+//A
 public class Connessione {
 
     public static Connection Connession() throws ClassNotFoundException, SQLException {
