@@ -69,6 +69,7 @@ public class ControllerProdotto {
                     System.out.print("Si scriva il nome del prodotto che si vuole cancellare: ");
                     String risposta2 = input.next();
                     prodQuery.deleteProdotto(risposta2, con);
+                    break;
             }
         }
         catch(InputMismatchException | SQLException e){

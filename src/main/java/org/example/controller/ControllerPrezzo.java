@@ -1,10 +1,7 @@
 package org.example.controller;
 
 import org.example.model.Prezzo;
-import org.example.query.Query_DettOrdini;
-import org.example.query.Query_Ordine;
 import org.example.query.Query_Prezzo;
-
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.InputMismatchException;
@@ -16,7 +13,6 @@ public class ControllerPrezzo {
     public static void controllerPrezzo(Connection con){
 
         Scanner input = new Scanner(System.in);
-        Query_Ordine ordQuery = new Query_Ordine();
         Query_Prezzo prezzoQuery = new Query_Prezzo();
 
 
