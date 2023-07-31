@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import org.example.exception.NullValueException;
 import org.example.model.DettOrdini;
 import org.example.model.Ordine;
 import org.example.query.Query_DettOrdini;
@@ -22,8 +23,8 @@ public class ControllerOrdine {
 
         try{
             System.out.print("Si vuole \n1-inserire un nuovo ordine \n2-aggiungere oggetti ad un ordine \n3-update di un ordine \n4-delete di un ordine \n5-stampa di uno o piu ordini: ");
-            String risp = input.next();
 
+            String risp = input.next();
 
             switch (risp){
                 case "1":
