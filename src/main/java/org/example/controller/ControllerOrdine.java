@@ -1,6 +1,5 @@
 package org.example.controller;
 
-import org.example.exception.NullValueException;
 import org.example.model.DettOrdini;
 import org.example.model.Ordine;
 import org.example.query.Query_DettOrdini;
