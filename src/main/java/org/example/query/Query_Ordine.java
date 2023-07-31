@@ -4,6 +4,7 @@ import org.example.model.Ordine;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Query_Ordine {
@@ -29,6 +30,46 @@ public class Query_Ordine {
             conn.rollback();/*fine transaction*/
             System.out.println(e.getMessage());
         }
+    }
+
+    public ResultSet selectOrdini(Connection con) throws SQLException {
+        ResultSet result = null;
+        try{
+
+
+            PreparedStatement quer = con.prepareStatement("select * from ordine");
+
+            result = quer.executeQuery();/*inizio transaction*/
+            System.out.print("Trovando i risultati...");
+            con.commit();/*fine transaction*/
+        }
+        catch(SQLException e ){
+            con.rollback();/*fine transaction*/
+            System.out.println(e.getMessage());
+        }
+
+        return result;
+    }
+
+    public ResultSet selectOrdine(String nome, Connection con) throws SQLException {
+        ResultSet result = null;
+        try{
+
+
+            PreparedStatement quer = con.prepareStatement("select * from ordine where NumeroOrdine = ?");
+            quer.setString(1,nome);
+
+
+            result = quer.executeQuery();/*inizio transaction*/
+            System.out.print("Trovando il risultato...");
+            con.commit();/*fine transaction*/
+        }
+        catch(SQLException e ){
+            con.rollback();/*fine transaction*/
+            System.out.println(e.getMessage());
+        }
+
+        return result;
     }
 
     public void deleteOrdini(int NumOrdine , Connection con) throws SQLException {
