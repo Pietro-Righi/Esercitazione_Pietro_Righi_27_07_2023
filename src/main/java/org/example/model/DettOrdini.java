@@ -2,6 +2,7 @@ package org.example.model;
 
 import java.sql.Date;
 import java.util.InputMismatchException;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class DettOrdini {
@@ -29,7 +30,7 @@ public class DettOrdini {
             int codOrd = input.nextInt();
             System.out.print("Inserire codice prodotto: ");
             int codProd = input.nextInt();
-
+            Object a = new Object();
             dettord = new DettOrdini(codOrd, codProd);
         }
 
